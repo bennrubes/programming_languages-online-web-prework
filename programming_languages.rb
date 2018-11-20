@@ -10,6 +10,6 @@ new_hash = {}
         new_hash[language][:style] << use
       end
     end
-end
+  end
 new_hash
 end
