@@ -4,7 +4,7 @@ new_hash = {}
   languages.each do |style, language_list|
     language_list.map do |language, description|
       binding.pry
-      new_hash[language][:type] = description[:type]
+      new_hash[language][description.key] = description[:type]
       if new_hash[language][:style] == nil
         new_hash[language][:style] = [style]
       else 
