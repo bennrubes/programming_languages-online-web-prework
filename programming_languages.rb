@@ -1,3 +1,17 @@
+require "pry"
 def reformat_languages(languages)
-  # your code here
+new_hash = {}
+  languages.each do |use, language_list|
+    language_list.map do |language, description|
+    new_hash[language] = description
+    end
+    language_list.map do |language, description|
+    if new_hash[language][:style] == nil
+      new_hash[language][:style] = [use]
+    else 
+      new_hash[language][:style] << use
+    end
+  end
+end
+new_hash
 end
